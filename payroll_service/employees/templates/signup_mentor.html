@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up as Mentor</title>
+</head>
+<body>
+    <h2>Sign Up as Mentor</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ mentor_form.as_p }}
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>

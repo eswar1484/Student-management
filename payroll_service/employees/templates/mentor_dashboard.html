@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mentorr Dashboard</title>
+</head>
+<body>
+    <h1>Mentor Dashboard</h1>
+    <h2>Studentss</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Student ID</th>
+            <th>Contact</th>
+            <th>Status</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.student_id }}</td>
+            <td>{{ student.contact }}</td>
+            <td>{{ student.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'show_leave_requests' %}">Show Leave Requests</a>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>

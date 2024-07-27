@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <h1>Student Dashboard</h1>
+    <h2>Leave Requests</h2>
+    <table>
+        <tr>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Reason</th>
+            <th>Status</th>
+        </tr>
+        {% for leave in leave_requests %}
+        <tr>
+            <td>{{ leave.start_date }}</td>
+            <td>{{ leave.end_date }}</td>
+            <td>{{ leave.reason }}</td>
+            <td>{{ leave.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'apply_leave' %}">Apply for Leave</a>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
